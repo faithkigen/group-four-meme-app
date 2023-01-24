@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { NavigationContext } from '../data/NavigationContext';
 import MemesCollection from './MemesCollection';
 
+
 function Home(props) {
     const [currentPage,setCurrentPage] = useContext(NavigationContext)
     return (
