@@ -123,7 +123,9 @@ const Authenticator = () => {
                         8 to 24 characters. <br />
                         Should start with a lower or upper case letter, a number and a special
                         character. <br />
-                        Allowed special characters:! @ # $ % ^ & * ( ) _ + - = { } [ ].
+                        Allowed special characters: <span aria-label="exclamation mark">!</span>
+                        <span aria-label="question mark">?</span><span aria-label="at symbol">@</span>
+                        <span aria-label="dollar sign">$</span><span aria-label="percent">%</span>
                     </p>
 
             </form>
