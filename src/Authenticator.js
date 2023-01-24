@@ -34,8 +34,37 @@ const Authenticator = () => {
     const [validMatchingPwd, setValidMatchingPwd] = useState(false);
     const [matchingPwdFocus, setMatchingPwdFocus] = useState(false);
 
-  return (
-    <div>Authenticator</div>
+    const [errMsg, setErrMsg] = useState("");  // error msg if an error exists
+    const [success, setSuccess] = useState(false);  // if the form submits successfully
+
+    useEffect(() => {                               // sets the focus when the component loads
+        userRef.current.focus();
+    }, []);
+
+    useEffect(() => {                        // here the username is validated
+        const result = USER_REGEX.test(user);
+        console.log(result);
+        console.log(user);
+        setValidName(result);
+    }, [user]);
+
+    useEffect(() => {
+        const result = PWD_REGEX.test(pwd);
+        console.log(result);
+        console.log(pwd);
+        setValidPwd(result);
+        const match = pwd === matchingPwd;
+        setValidMatchingPwd(match);   // match does the comparison of the passwords
+    }, [pwd, matchingPwd]);
+
+    useEffect(() => {
+        setErrMsg("");
+    }, [user, pwd, matchingPwd]);
+
+  return (                       // section for the jsx
+    <section>   
+
+        </section>
   )
 }
 
