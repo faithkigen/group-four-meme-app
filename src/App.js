@@ -1,9 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Authenticator from './Authenticator'
 
 function App() {
   return (
-    <div>MEME APP</div>
+    <main className="App">
+      <Authenticator />
+     {/* <div>App</div> */}
+    </main>
   );
 }
 
