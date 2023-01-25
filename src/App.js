@@ -1,23 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
-import axios from 'axios';
-import Home from './views/Home';
-import MemeDetails from './views/MemeDetails';
-import MemesCollection from './views/MemesCollection';
-import { useState } from 'react';
-import { useContext } from 'react';
-import { NavigationContext } from './data/NavigationContext';
+import React from 'react'
+import { BrowserRouter as Router,Routes, Route } from 'react-router-dom'
 
-function App() {
-  // axios.get("http://alpha-meme-maker.herokuapp.com/1")
-  // .then((data)=> console.log(data))
-  const [currentPage,setCurrentPage] = useContext(NavigationContext)
-  return (
-    <>
-    <div>MEME APP</div>
-    {currentPage}
-    </>
-  );
+import LandingPage from './components/pages/LandingPage'
+import LoginPage from './components/pages/LoginPage'
+import RegisterPage from './components/pages/RegisterPage'
+import ForgetPasswordPage from './components/pages/ForgetPasswordPage'
+import HomePage from './components/pages/HomePage'
+
+import './App.css'
+
+export default function App() {
+    return (
+        <Router>
+            <div>
+                <Routes>
+                    <Route path="/" element={ <LandingPage/> } />
+                    <Route path="/login" element={ <LoginPage/> } />
+                    <Route path="/register" element={ <RegisterPage />} />
+                    <Route path="/forget-password" element={ <ForgetPasswordPage />} />
+                    <Route path="/home" element={< HomePage/> } />
+                </Routes>
+                <Footer />
+            </div>
+        </Router>
+    )
 }
 
-export default App;
+const Footer = () => {
+    return (
+        <p className="text-center" style={ FooterStyle }>Meme-app</p>
+    )
+}
+
+const FooterStyle = {
+    background: "#222",
+    fontSize: ".8rem",
+    color: "#fff",
+    position: "absolute",
+    bottom: 0,
+    padding: "1rem",
+    margin: 0,
+    width: "100%",
+    opacity: ".5"
+}

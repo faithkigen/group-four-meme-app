@@ -9,7 +9,8 @@ function Home(props) {
     return (
         <div>
             <h1>Home page</h1>
-            <button onClick={()=>setCurrentPage(<MemesCollection/>)}>Go to Memems</button>
+            <button onClick={()=>setCurrentPage(<MemesCollection/>)}>Go to Memes</button>
+        
         </div>
     );
 }
