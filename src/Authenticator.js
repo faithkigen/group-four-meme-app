@@ -6,12 +6,10 @@ import axios from "axios";
 // USER_REGEX is going to validate the username
 //[a-zA-z] - must start with a lower or upper case letter
 //[a-zA-Z0-9_-]{3,23} - must be between 3 and 23 characters long(lower, uppercase, numbers, hyphens, and underscores)
-const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
+const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
 
 // PWD_REGEX is going to validate the password
-// (?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
-const REGISTER_URL = process.env.REACT_APP_REGISTER_URL;   // to be checked again
 
 const Authenticator = () => {
     const userRef = useRef();
@@ -40,16 +38,16 @@ const Authenticator = () => {
     useEffect(() => {
         // here the username is validated
         const result = USER_REGEX.test(user);
-        // console.log(result);
-        // console.log(user);
-        // setValidName(result);
+        console.log(result);
+        console.log(user);
+        setValidName(result);
     }, [user]);
 
     useEffect(() => {
         const result = PWD_REGEX.test(pwd);
-        // console.log(result);
-        // console.log(pwd);
-        // setValidPwd(result);
+        console.log(result);
+        console.log(pwd);
+        setValidPwd(result);
         const match = pwd === matchingPwd;
         setValidMatchingPwd(match); // match does the comparison of the passwords
     }, [pwd, matchingPwd]);
@@ -58,11 +56,30 @@ const Authenticator = () => {
         setErrMsg("");
     }, [user, pwd, matchingPwd]);
 
-    return (
-        // section for the jsx
-        // the <p> tag is going to display the error msg if an error exists
+    const handleSubmit = async (e) => {
+        e.preventDefault();    // stops the form from submitting
+        const v1 = USER_REGEX.test(user);
+        const v2 = PWD_REGEX.test(pwd);
+        if (v1 || v2) {
+            setErrMsg("Invalid Entry");
+            return;     // validates the user input
+        }
+        console.log(user, pwd);
+        setSuccess(true);     // going to use axios to validate the inputs
+    }
+
+    return (        // section for the jsx  
+    <>
+    {success ? (
         <section>
-            <p
+            <h1>Welcome!</h1>
+            <p>
+                <a href="#">Sign In</a>
+            </p>
+        </section>
+    ) : (
+        <section>
+            <p     // the <p> tag is going to display the error msg if an error exists
                 ref={errRef}
                 className={errMsg ? "errmsg" : "offscreen"}
                 aria-live="assertive"
@@ -70,7 +87,7 @@ const Authenticator = () => {
                 {errMsg}
             </p>
             <h1>Register</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label htmlFor="username">
                     Username:
                     <span className={validName ? "valid" : "hide"}> 
@@ -155,9 +172,17 @@ const Authenticator = () => {
                             {/*   button is diasbled until the input states are true */}
                             <button disabled={!validName || !validPwd || !validMatchingPwd ? true : false}>
                                 Sign Up</button>
-
             </form>
+            <p>
+                Already have an account? <br/>
+                <span className="line">
+                    {/* { insert router link to login page} */}
+                    <a href="#">Sign In</a>
+                    </span>
+            </p>
         </section>
+    )}
+    </>
     );
 };
 
