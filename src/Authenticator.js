@@ -3,6 +3,7 @@ import {faCheck,faTimes,faInfoCircle,} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 
+
 // USER_REGEX is going to validate the username
 //[a-zA-z] - must start with a lower or upper case letter
 //[a-zA-Z0-9_-]{3,23} - must be between 3 and 23 characters long(lower, uppercase, numbers, hyphens, and underscores)
@@ -72,7 +73,7 @@ const Authenticator = () => {
     <>
     {success ? (
         <section>
-            <h1>Congratulations !!</h1>
+            <h1>Congratulations!</h1>
             <p>
                 <a href="#">Sign In</a>
             </p>
@@ -177,7 +178,7 @@ const Authenticator = () => {
                 Already have an account? <br/>
                 <span className="line">
                     {/* { insert router link to login page} */}
-                    <a href="#">Sign In</a>
+                    <a href="/">Sign In</a>
                     </span>
             </p>
         </section>
