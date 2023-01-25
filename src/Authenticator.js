@@ -104,7 +104,7 @@ const Authenticator = () => {
                     <span className={validPwd ? "valid" : "hide"}> 
                         <FontAwesomeIcon icon={faCheck} />
                     </span>
-                    <span className={validPwd || !user ? "hide" : "invalid"}>
+                    <span className={validPwd || !pwd ? "hide" : "invalid"}>
                         <FontAwesomeIcon icon={faTimes} />
                         </span>
                 </label>
@@ -126,7 +126,35 @@ const Authenticator = () => {
                         Allowed special characters: <span aria-label="exclamation mark">!</span>
                         <span aria-label="question mark">?</span><span aria-label="at symbol">@</span>
                         <span aria-label="dollar sign">$</span><span aria-label="percent">%</span>
+                        <span aria-label="hashtag">#</span>
                     </p>
+                    <label htmlFor="confirm_pwd">
+                    Confirm Password:
+                    <span className={validMatchingPwd &&  matchingPwd? "valid" : "hide"}> 
+                        <FontAwesomeIcon icon={faCheck} />
+                    </span>
+                    <span className={validMatchingPwd || !matchingPwd ? "hide" : "invalid"}>
+                        <FontAwesomeIcon icon={faTimes} />
+                        </span>
+                        </label>
+                        <input
+                        type="password"
+                        id="confirm_pwd"
+                        onChange={(e) => setMatchingPwd(e.target.value)}  
+                    required
+                        aria-invalid={validMatchingPwd? "false" : "true"}
+                        aria-describedby="confirmpwdnote"
+                        onFocus={() => setUserFocus(true)}
+                        onBlur={() => setUserFocus(false)}
+                        />
+                        <p id="confirmpwdnote" className={matchingPwdFocus && !validMatchingPwd ? "instructions" :
+                         "offscreen"}>
+                            <FontAwesomeIcon icon={faInfoCircle} />
+                            Must match the initial password input field.
+                            </p>
+                            {/*   button is diasbled until the input states are true */}
+                            <button disabled={!validName || !validPwd || !validMatchingPwd ? true : false}>
+                                Sign Up</button>
 
             </form>
         </section>
