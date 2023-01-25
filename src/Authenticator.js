@@ -58,12 +58,12 @@ const Authenticator = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();    // stops the form from submitting
-        const v1 = USER_REGEX.test(user);
-        const v2 = PWD_REGEX.test(pwd);
-        if (v1 || v2) {
-            setErrMsg("Invalid Entry");
-            return;     // validates the user input
-        }
+        // const v1 = USER_REGEX.test(user);
+        // const v2 = PWD_REGEX.test(pwd);
+        // if (v1 || v2) {
+        //     setErrMsg("Invalid Entry");
+        //     return;     // validates the user input  // use the rest api to work on that
+        // }
         console.log(user, pwd);
         setSuccess(true);     // going to use axios to validate the inputs
     }
@@ -72,7 +72,7 @@ const Authenticator = () => {
     <>
     {success ? (
         <section>
-            <h1>Welcome!</h1>
+            <h1>Congratulations !!</h1>
             <p>
                 <a href="#">Sign In</a>
             </p>
@@ -187,3 +187,4 @@ const Authenticator = () => {
 };
 
 export default Authenticator;
+
