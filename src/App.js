@@ -6,23 +6,25 @@ import LoginPage from './components/pages/LoginPage'
 import RegisterPage from './components/pages/RegisterPage'
 import ForgetPasswordPage from './components/pages/ForgetPasswordPage'
 import HomePage from './components/pages/HomePage'
+import { useState } from 'react'
 
 import './App.css'
 
 export default function App() {
+const [currentPage,setCurrentPage] = useState()
     return (
+        <>
         <Router>
-            <div>
-                <Routes>
+            <Routes>
                     <Route path="/" element={ <LandingPage/> } />
                     <Route path="/login" element={ <LoginPage/> } />
                     <Route path="/register" element={ <RegisterPage />} />
                     <Route path="/forget-password" element={ <ForgetPasswordPage />} />
                     <Route path="/home" element={< HomePage/> } />
-                </Routes>
-                <Footer />
-            </div>
+            </Routes>
         </Router>
+         <Footer />
+         </>
     )
 }
 
