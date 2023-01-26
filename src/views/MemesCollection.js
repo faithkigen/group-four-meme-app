@@ -7,15 +7,25 @@ import SingleMeme from './SingleMeme';
 import { useState } from 'react';
 import DeleteMeme from './DeleteMeme';
 import UpdateMeme from './UpdateMeme';
+import AddMeme from './AddMeme';
+import { Link } from 'react-router-dom'
+import { MemeViewContext } from '../data/MemeViewContext';
+
 
 function MemesCollection(props) {
-    const [currentPage,setCurrentPage] = useContext(NavigationContext)
+   // const [currentPage,setCurrentPage] = useContext(NavigationContext)
     const [memesData,setMemesData] = useContext(MemesDataContext)
     const [pageData,setPageData] = useState([])
+ 
     useEffect(()=>{
         setPageData(memesData.map((meme)=>{
             return <>
+                   <AddMeme/>
+                   <Link to="/memeview">
+                   <div>
                    <SingleMeme memedata={meme} key={meme.id}/>  
+                   </div>
+                   </Link>
                    <DeleteMeme memedata={meme} key={meme.name}/>
                    <UpdateMeme memedata={meme} key={meme.url}/>
                    </>
@@ -25,7 +35,7 @@ function MemesCollection(props) {
     return (
         <div>
             <h2>All Memes</h2>
-            <button onClick={()=>setCurrentPage(<Home/>)}>Go to Home</button>
+           {/* // <button onClick={()=>setCurrentPage(<Home/>)}>Go to Home</button> */}
             {pageData}
         </div>
     );

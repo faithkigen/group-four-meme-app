@@ -9,6 +9,8 @@ import HomePage from './components/pages/HomePage'
 import { useState } from 'react'
 
 import './App.css'
+import MemesCollection from './views/MemesCollection'
+import MemeView from './views/MemeView'
 
 export default function App() {
 const [currentPage,setCurrentPage] = useState()
@@ -21,6 +23,8 @@ const [currentPage,setCurrentPage] = useState()
                     <Route path="/register" element={ <RegisterPage />} />
                     <Route path="/forget-password" element={ <ForgetPasswordPage />} />
                     <Route path="/home" element={< HomePage/> } />
+                    <Route path="/memes" element={< MemesCollection/> } />
+                    <Route path="/memeview" element={<MemeView/>}/>
             </Routes>
         </Router>
          <Footer />
