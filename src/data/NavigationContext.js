@@ -10,7 +10,6 @@ const NavigationProvider = (props) =>{
      {props.children}
     </NavigationContext.Provider>
   )
-
 }
 export {NavigationContext}
 export {NavigationProvider}

@@ -9,8 +9,10 @@ const [memesData,setMemesData] = useState([])
 useEffect(()=>{
     axios.get("https://api.imgflip.com/get_memes")
     .then(data => setMemesData(data.data.data.memes))
+
 },[])
-console.log(memesData)
+
+
 return(
     <MemesDataContext.Provider value={[memesData,setMemesData]}>
         {props.children}
