@@ -1,6 +1,7 @@
 import React from 'react';
 import { useContext } from 'react';
 import { NavigationContext } from '../data/NavigationContext';
+import AddMeme from './AddMeme';
 import MemesCollection from './MemesCollection';
 
 
@@ -9,8 +10,8 @@ function Home(props) {
     return (
         <div>
             <h1>Home page</h1>
-            <button onClick={()=>setCurrentPage(<MemesCollection/>)}>Go to Memes</button>
-        
+            <button onClick={()=>setCurrentPage(<MemesCollection/>)}>Go to Memems</button>
+            <AddMeme/>
         </div>
     );
 }
