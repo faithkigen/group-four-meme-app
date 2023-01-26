@@ -1,24 +1,19 @@
-import Authenticator from './Authenticator'
+// import Authenticator from './Authenticator'
 import Login from './Login';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './Layout';
+import Authenticator from './Authenticator';
+
 
 function App() {
 
   return (
-    // <Router>
-    //   <div>
-    //     <Routes>
-    //       <Route path="/" element={<Login />} />
-    //       <Route path="/auth" element={<Authenticator />} />
-    //     </Routes>
-    //     <footer/>
-    //   </div>
-    // </Router>
-    <main className="App">
-      {/* <Authenticator /> */}
-      <Login />
-     {/* <div>App</div> */}
-    </main>
+    <Routes>
+      <Route path="/" element={<Layout />} >
+        <Route path="/login" element={<Login />} />
+        <Route path="/auth" element={<Authenticator />} />
+        </Route>
+      </Routes>
   );
 }
 
