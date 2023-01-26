@@ -94,7 +94,7 @@ form {
     background: #f3f3f3;
     border: 1px solid #ddd;
     border-radius: 2px;
-    padding: 2rem;
+    padding: 4rem;
     margin: 2rem 0 1rem 0
 }
 
@@ -112,7 +112,7 @@ form label {
 
 input {
     width: 15rem;
-    padding: .3rem;
+    padding: 1rem;
     border-radius: 5px;
     outline: none;
     border: none;
@@ -121,7 +121,7 @@ input {
 #sub_btn {
     display: block;
     width: 100%;
-    padding: .3rem;
+    padding: 1rem;
     border: none;
     background: #222;
     color: #fff;
