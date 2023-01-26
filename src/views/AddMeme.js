@@ -21,7 +21,7 @@ function AddMeme(props) {
 
   function addNewMeme(e) {
     e.preventDefault();
-    setMemesData([...memesData, newMeme])
+    setMemesData([newMeme, ...memesData])
     
   }
   return (

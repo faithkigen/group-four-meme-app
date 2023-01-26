@@ -3,12 +3,17 @@
 //
 import React from 'react';
 import MemesCollection from './MemesCollection';
+import { useState } from 'react';
+import { useContext } from 'react';
+import { MemeViewContext } from '../data/MemeViewContext';
+
 
 function SingleMeme({memedata}) {
+    const [memeView,setMemeView]  = useContext(MemeViewContext)
     return (
-        <div>
+        <div onClick={setMemeView(memedata)}>
             <p>{memedata.name}</p>
-           {/* <img src={memedata.url}></img> */}
+            <img src={memedata.url}></img>
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import { NavigationContext } from '../../data/NavigationContext'
 import '../../App.css'
 
 export default function ForgetPasswordPage() {
