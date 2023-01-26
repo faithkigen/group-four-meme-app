@@ -9,7 +9,7 @@ import DeleteMeme from './DeleteMeme';
 import UpdateMeme from './UpdateMeme';
 
 function MemesCollection(props) {
-    const [currentPage,setCurrentPage] = useContext(NavigationContext)
+   // const [currentPage,setCurrentPage] = useContext(NavigationContext)
     const [memesData,setMemesData] = useContext(MemesDataContext)
     const [pageData,setPageData] = useState([])
     useEffect(()=>{
@@ -25,7 +25,7 @@ function MemesCollection(props) {
     return (
         <div>
             <h2>All Memes</h2>
-            <button onClick={()=>setCurrentPage(<Home/>)}>Go to Home</button>
+           {/* // <button onClick={()=>setCurrentPage(<Home/>)}>Go to Home</button> */}
             {pageData}
         </div>
     );

@@ -1,6 +1,3 @@
-
-
-
 //This function component provides a form for adding memes
 //It accesses the MemesDataContext to get memes fetched from the api
 //When data is inputted in the form, it is added as the values of a state variable object that is initially empty which 

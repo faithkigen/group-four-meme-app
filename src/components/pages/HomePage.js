@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function HomePage() {
     return (
-        
+        <>
         <div className="text-left">
             <h1 className="main-title home-page-title">hi come laugh with us</h1>
             <nav>
@@ -18,5 +18,6 @@ export default function HomePage() {
                 <button className="primary-button">Log out</button>
             </Link>
         </div>
+        </>
     )
 }
