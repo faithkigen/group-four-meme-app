@@ -13,7 +13,7 @@ function SingleMeme({memedata}) {
     return (
         <div onClick={setMemeView(memedata)}>
             <p>{memedata.name}</p>
-            <img src={memedata.url}></img>
+            <img src={memedata.url} className="memeImage"></img>
         </div>
     );
 }
