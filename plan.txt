@@ -1,0 +1,17 @@
+1.Use App component for navigation
+eg.
+
+2. Main context component that provides the Memes data
+3.All components that use the memes data get it from there 
+-This will enable the app state and ui to be in sync with the server
+eg. 
+Memes collection is where all the memes are displayed
+Update meme component allows a user to change a specific meme
+When the fetch to update a meme is run, 
+Memes collection should automatically update because 
+Update Meme component will be changing its state directly through their shared context
+
+Add creating, updating and deleting memes functionality in a non-persistent way 
+but w
+
+use optimistic rendering
