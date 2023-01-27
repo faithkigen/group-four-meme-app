@@ -13,6 +13,9 @@ export default function HomePage() {
         <div className="text-left">
             <h1 className="main-title home-page-title">hi come laugh with us</h1>
             <nav>
+                <Link to="/memes">
+                <button id="memes-button">Go to Memes</button>
+                </Link>
             <ul>
                 <li><a href="default">Home</a></li>
                 {/* <li><a href="news">News</a></li>

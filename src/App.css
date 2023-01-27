@@ -164,3 +164,17 @@ form span {
     color:black;
     background-color:white;
 }
+.memeImage{
+    object-fit: contain;
+    width:300px;
+    height:300px;
+}
+
+#memes-button{
+    width:300px;
+    height:100px;
+    font-size:40px;
+    color:yellow;
+    background-color:black;
+
+}
