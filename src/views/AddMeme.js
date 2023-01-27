@@ -29,6 +29,7 @@ function AddMeme(props) {
     .then(r => console.log(r))
     .catch(e => console.log(e))
  //allows the page to render optimistically
+ 
     setMemesData([newMeme, ...memesData])
   }
   return (

@@ -42,7 +42,6 @@ function UpdateMeme({ memedata }) {
     
   return (<>
    {/* provides a user with a form that allows them to make changes to a meme */}
-    <button>Update Meme</button>
     <form onSubmit={handleSubmit}>
         <input
           type="text"
