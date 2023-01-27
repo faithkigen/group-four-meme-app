@@ -17,11 +17,11 @@ const [currentPage,setCurrentPage] = useState()
         <>
         <Router>
             <Routes>
-                    <Route path="/" element={ < HomePage/> } />
+                    <Route path="/" element={ <LandingPage/>} /> 
                     <Route path="/login" element={ <LoginPage/> } />
                     <Route path="/register" element={ <RegisterPage />} />
                     <Route path="/forget-password" element={ <ForgetPasswordPage />} />
-                    <Route path="/home" element={<LandingPage/>} />
+                    <Route path="/home" element={< HomePage/>} />
                     <Route path="/memes" element={< MemesCollection/> } />
                     <Route path="/memeview" element={<MemeView/>}/>
             </Routes>
