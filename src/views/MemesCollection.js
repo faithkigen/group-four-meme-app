@@ -16,12 +16,13 @@ function MemesCollection(props) {
    // const [currentPage,setCurrentPage] = useContext(NavigationContext)
     const [memesData,setMemesData] = useContext(MemesDataContext)
     const [pageData,setPageData] = useState([])
+    const [memeView,setMemeView]  = useContext(MemeViewContext)
  
     useEffect(()=>{
         setPageData(memesData.map((meme)=>{
             return <>
                    <Link to="/memeview">
-                   <div>
+                   <div onClick={()=>{setMemeView(meme)}}>
                    <SingleMeme memedata={meme} key={meme.id}/>  
                    </div>
                    </Link>
