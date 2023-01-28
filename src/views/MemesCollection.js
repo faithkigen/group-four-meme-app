@@ -11,7 +11,6 @@ import AddMeme from './AddMeme';
 import { Link } from 'react-router-dom'
 import { MemeViewContext } from '../data/MemeViewContext';
 
-
 function MemesCollection(props) {
    // const [currentPage,setCurrentPage] = useContext(NavigationContext)
     const [memesData,setMemesData] = useContext(MemesDataContext)

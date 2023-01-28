@@ -32,11 +32,11 @@ function AddMeme(props) {
           setNewMeme({ ...newMeme, name: e.target.value });
           
         }}
-        placeholder="Enter the meme name"
+        placeholder="Enter meme name"
       ></input>
       <input
         type="text"
-        placeholder="Enter the meme url"
+        placeholder="Enter meme url"
         onChange={(e) => {
           setNewMeme({ ...newMeme, url: e.target.value });
         }}

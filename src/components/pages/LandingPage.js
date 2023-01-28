@@ -22,8 +22,9 @@ export default function LandingPage() {
 const HeaderStyle = {
     width: "100%",
     height: "100vh",
-    //backgroundImage: {imageone},
+     backgroundImage: url('https://cdn.pixabay.com/photo/2018/05/09/21/47/cat-3386220__340.jpg'),
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    backgroundSize: "cover"
+    backgroundSize: "cover",
 }
+    

@@ -14,6 +14,7 @@ function SingleMeme({memedata}) {
         <div onClick={setMemeView(memedata)}>
             <p>{memedata.name}</p>
             <img src={memedata.url}></img>
+            
         </div>
     );
 }

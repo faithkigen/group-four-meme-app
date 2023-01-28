@@ -10,7 +10,7 @@ body {
     margin: 0 auto;
     background-color:blue;
     text-align: center;
-    background-image: url('https://media.istockphoto.com/id/983004274/vector/smiley-background-vector-template-with-yellow-funny-smileys-or-emoticons-and-empty-blank-space.jpg?s=612x612&w=0&k=20&c=OMcil-qp7wzFQJCw9ImJwCq9pyCoSm419lw0fC0WxqU=');
+    background-image: url('https://cdn.pixabay.com/photo/2021/11/04/10/46/apes-6767945_960_720.jpg');
     background-repeat: no-repeat;
     background-position-x: 100%;
     background-size:cover ;
@@ -89,12 +89,15 @@ body {
 
 h2 {
     font-weight: 300;
+    font-size: medium;
+    font-style: calc;
+    font-display: inherit;
 }
 
 form {
     display: inline-block;
-    background: #f3f3f3;
-    border: 1px solid #ddd;
+    background: hsl(0, 9%, 71%);
+    border: 1px solid rgb(227, 212, 5);
     border-radius: 2px;
     padding: 2rem;
     margin: 2rem 0 1rem 0
@@ -118,6 +121,9 @@ input {
     border-radius: 5px;
     outline: none;
     border: none;
+    font-size: medium;
+    font-style: oblique;
+
 }
 
 #sub_btn {
@@ -125,13 +131,13 @@ input {
     width: 100%;
     padding: .3rem;
     border: none;
-    background: #222;
+    background: #ede3e3;
     color: #fff;
     border-radius: 3px;
 }
 
 #sub_btn:hover {
-    background: #333;
+    background: rgb(230, 229, 234);
     transition: all .5s;
 }
 
@@ -144,6 +150,8 @@ footer p {
 
 #checkbox {
     width: 1rem;
+    font-style: inherit;
+    font-size: medium;
 }
 
 form span {
@@ -152,14 +160,25 @@ form span {
 
 #reset_pass_lbl {
     float: left;
+    font-size: medium;
+    font-style:italic;
 }
 
 /***    Home Page     ***/
+.home-page{
+    background-image:url('https://cdn.pixabay.com/photo/2021/11/04/10/46/apes-6767945__340.jpg') ;
+}
 .home-page-title {
-    color: #222;
+    color: rgb(209, 12, 12);
 }
 
 .linksDiv a{
-    color:black;
+    color:#b62929;
     background-color:white;
 }
+
+
+    
+
+
+
