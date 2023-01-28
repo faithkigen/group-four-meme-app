@@ -40,6 +40,9 @@ body {
 }
 
 /***    Landing Page     ***/
+#join-text{
+    margin-top:20px;
+}
 
 .main-title,
 .main-para {
@@ -49,14 +52,15 @@ body {
 .main-title {
     padding-top: 10rem;
     font-size: 5rem;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Roboto', sans-serif;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 800;
     color:black;
 }
 
 .main-para {
-    font-size: 2.5rem;
+    margin-top:20px;
+    font-size: 2.2rem;
     text-Transform: capitalize;
     color: #333;
 }
@@ -122,7 +126,12 @@ input {
 
 #sub_btn {
     display: block;
-    width: 100%;
+    width: 150px;
+    height:50px;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-left:auto;
+    margin-right:auto;
     padding: .3rem;
     border: none;
     background: #222;
@@ -165,8 +174,8 @@ form span {
 }
 .memeImage{
     object-fit: contain;
-    width:300px;
-    height:300px;
+    width:400px;
+    height:400px;
 }
 
 #memes-button{
@@ -176,4 +185,154 @@ form span {
     color:yellow;
     background-color:black;
 
+}
+
+.loginForm{
+    background-color: rgb(149, 149, 149);
+    width:40%;
+    height:300px;
+}
+
+.loginForm input{
+height:50px;
+}
+.loginForm input::placeholder{
+    text-align:center;
+    font-size:16px;
+    }
+
+.forgotPassword{
+  margin-left:40%;
+  margin-top:20px;
+  margin-bottom:20px;
+
+}
+
+#sign-in-h2{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.registerForm {
+    background-color: rgb(149, 149, 149);
+}
+
+.registerForm label{
+   margin-left:35%;
+   font-size:16px;
+   margin-bottom:20px;
+   margin-top:10px;
+}
+
+.registerForm input{
+    height:50px;
+
+}
+.registerForm input::placeholder{
+ text-align: center;
+ font-size:16px;
+}
+
+#meme-title{
+    margin-top:30px;
+   font-size:50px;
+   font-weight:bold;
+   background-color:white;
+   width:100%;
+}
+
+.addMemeForm{
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    flex-direction:column;
+    width:400px;
+    justify-content:center;
+    background-color: rgb(129, 129, 129);
+}
+
+.addMemeForm input{
+    margin-top:10px;
+    margin-bottom: 10px;
+    height:50px;
+}
+
+.addMemeForm input::placeholder{
+    text-align:center;
+}
+
+.addMemeForm button{
+   width:120px;
+   height:40px;
+   margin-left:auto;
+   margin-right:auto;
+   color:yellow;
+   background-color: #222;
+   border:0px;
+   margin-top:10px;
+   border-radius:10px;
+}
+
+#add-meme-link{
+color:blue;
+text-decoration:underline;
+padding-bottom:20px;
+width:100%;
+background-color:white;
+
+}
+
+#add-meme-link:hover{
+    color:red;
+    }
+
+#meme-heading{
+margin-top:10px;
+margin-bottom:10px;
+}
+
+.memesContainer{
+display:flex;
+flex-direction:row;
+flex-wrap: wrap;
+}
+
+.memeButton{
+    margin-left:20px;
+    height:40px;
+    width:120px;
+    color:yellow;
+    background-color:rgb(56, 56, 56);
+    border:0px;
+    border-radius:10px;
+    margin-top:20px;
+    margin-bottom:50px;
+    font-weight:200;
+
+
+}
+
+.memeButton:hover{
+    color:rgb(56, 56, 56);
+    background-color:white;
+}
+
+#meme-view-image{
+    object-fit:contain;
+    width:500px;
+}
+
+#meme-view-back{
+    width:180px;
+    height:40px;
+    color:yellow;
+    background-color:black;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#meme-view-back:hover{
+    color:black;
+    background-color:white;
 }

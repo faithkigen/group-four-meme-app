@@ -6,18 +6,16 @@ import '../../App.css'
 export default function SignInPage() {
     return (
         <div className="text-center m-5-auto">
-            <h2>Sign in to us</h2>
-            <form action="/home">
+            <h2 id="sign-in-h2">Sign in</h2>
+            <form action="/memes" className='loginForm'>
                 <p>
-                    <label>Username or email address</label><br/>
-                    <input type="text" name="first_name" required />
+                    <input type="text" name="first_name" required placeholder='Email address or username'/>
                 </p>
                 <p>
-                    <label>Password</label>
-                    <Link to="/forget-password"><label className="right-label">Forget password?</label></Link>
                     <br/>
-                    <input type="password" name="password" required />
+                    <input type="password" name="password" required placeholder='Your password'/>
                 </p>
+                <Link to="/forget-password"><label className="forgotPassword">Forget password?</label></Link>
                 <p>
                     <button id="sub_btn" type="submit">Login</button>
                 </p>

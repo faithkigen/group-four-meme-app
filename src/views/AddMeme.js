@@ -6,6 +6,8 @@ import axios from "axios";
 function AddMeme(props) {
   //imports the context which stores all the data for the page
   const [memesData,setMemesData] = useContext(MemesDataContext)
+
+  const [showForm,setShowForm] = useState(false)
   //creates a state variable which defaults to an object with required properties
   const [newMeme, setNewMeme] = useState({
     box_count: 0,
@@ -17,6 +19,7 @@ function AddMeme(props) {
     width: 0,
   });
   function addNewMeme(e) {
+    setShowForm(false)
     //prenets default form submission behaviour which is refreshing of the page
     e.preventDefault();
     //attempts to add the new meme to the server
@@ -33,8 +36,10 @@ function AddMeme(props) {
     setMemesData([newMeme, ...memesData])
   }
   return (
-    //provides a form that allows a user to add a neww meme to the page 
-    <form onSubmit={addNewMeme}>
+     showForm ?
+     <>
+    <p>Add a new meme:</p>
+    <form onSubmit={addNewMeme} className="addMemeForm">
       <input
         type="text"
         //updates the name property on the state object as soon as the user enters 
@@ -58,8 +63,15 @@ function AddMeme(props) {
         //generates an id for the new meme 
       ...newMeme,
       id: `${Math.floor(Math.random() * Math.pow(10, 9))}`,
-    })}}>Add Meme</button>
+    })}}
+    >Add Meme</button>
     </form>
+    </>
+    :
+
+    <p onClick={()=>{setShowForm(true)}} id="add-meme-link"> Add your own meme</p>
+
+   
   );
 }
 

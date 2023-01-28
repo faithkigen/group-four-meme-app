@@ -7,10 +7,9 @@ import { MemeViewContext } from '../data/MemeViewContext';
 
 
 function SingleMeme({memedata}) {
-
     return (
-        <div >
-            <p>{memedata.name}</p>
+        <div>
+            <h2 id="meme-heading">{memedata.name}</h2>
             <img src={memedata.url} className="memeImage"></img>
         </div>
     );

@@ -26,25 +26,6 @@ const [currentPage,setCurrentPage] = useState()
                     <Route path="/memeview" element={<MemeView/>}/>
             </Routes>
         </Router>
-         <Footer />
          </>
     )
-}
-
-const Footer = () => {
-    return (
-        <p className="text-center" style={ FooterStyle }>Meme-app</p>
-    )
-}
-
-const FooterStyle = {
-    background: "#222",
-    fontSize: ".8rem",
-    color: "#fff",
-    position: "absolute",
-    bottom: 0,
-    padding: "1rem",
-    margin: 0,
-    width: "100%",
-    opacity: ".5"
 }

@@ -22,7 +22,7 @@ function DeleteMeme({memedata}) {
     }))
     }
     return (
-    <button onClick={handleDelete}>Delete</button>
+    <button onClick={handleDelete} className="memeButton">Delete</button>
     );
 }
 

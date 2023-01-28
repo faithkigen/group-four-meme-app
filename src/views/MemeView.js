@@ -8,11 +8,12 @@ function MemeView({memedata}) {
     const [memeView,setMemeView]  = useContext(MemeViewContext)
     return (
     <div>
-        <p>{memeView.name}</p>
-        <img src={memeView.url}></img>
+        <h1>{memeView.name}</h1>
+        <img src={memeView.url} id="meme-view-image"></img>
+        
        {/* <img src={memedata.url}></img> */}
        <Link to="/memes">
-       <button>Back to Memes</button>
+       <button id="meme-view-back">Back to Memes</button>
        </Link>
     </div>
     );

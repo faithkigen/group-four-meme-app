@@ -7,6 +7,7 @@ import { MemesDataContext } from "../data/MemesDataContext";
 function UpdateMeme({ memedata }) {
 //imports the context which stores all the data for the page
   const [memesData, setMemesData] = useContext(MemesDataContext);
+  const [updateForm,setUpdateForm] = useState(false)
 //creates a state variable which defaults to an object with the properties
 //the user will not change already filled and the rest as an empty string
   const [updateMeme, setUpdatedMeme] = useState({
@@ -22,6 +23,7 @@ function UpdateMeme({ memedata }) {
 
   function handleSubmit(e) {
     //prevents default form submission behaviour which is refreshing the page
+    setUpdateForm(true)
     e.preventDefault();
     //attempts to send the updated meme to the server
    axios.patch("https://api.imgflip.com/get_memes",updateMeme,{
@@ -40,7 +42,9 @@ function UpdateMeme({ memedata }) {
     setMemesData([updateMeme, ...filteredMeme]);
   }
     
-  return (<>
+  return (
+    updateForm ?
+    <>
    {/* provides a user with a form that allows them to make changes to a meme */}
     <form onSubmit={handleSubmit}>
         <input
@@ -63,7 +67,11 @@ function UpdateMeme({ memedata }) {
         ></input>
         <button type="submit">Change Meme</button>
       </form>
-</>)
+</>
+:
+
+<button onClick={()=>{setUpdateForm(true)}} className="memeButton">UpdateMeme</button>
+)
 ;
 }
 
