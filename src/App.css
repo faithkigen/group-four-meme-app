@@ -338,3 +338,15 @@ flex-wrap: wrap;
     color:black;
     background-color:white;
 }
+
+#logout-button{
+    position:absolute;
+    background-color:black;
+    color:yellow;
+    width:120px;
+    height:40px;
+    margin-left:40%;
+    margin-top:30px;
+    margin-bottom:0px;
+    top:0px;
+}

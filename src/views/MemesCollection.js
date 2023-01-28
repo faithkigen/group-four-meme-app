@@ -20,7 +20,7 @@ function MemesCollection(props) {
  
     useEffect(()=>{
         setPageData(memesData.map((meme)=>{
-            return  <>          
+            return  <>      
                    <Link to="/memeview">
                    <div onClick={()=>{setMemeView(meme)}}>
                    <SingleMeme memedata={meme} key={meme.id}/>  
@@ -35,7 +35,11 @@ function MemesCollection(props) {
     console.log(memesData)
     return (
         <div>
+              <Link to="/">
+                   <button id="logout-button">Logout</button> 
+            </Link> 
             <h2 id="meme-title">Meme Hub</h2>
+           
            {/* // <button onClick={()=>setCurrentPage(<Home/>)}>Go to Home</button> */}
           
             <AddMeme/>
