@@ -25,10 +25,10 @@ The API used to fetch the original list of memes from the server is the ImageFli
          https://imgflip.com/api
 
 ### Authors, Licence and Development Status
-Status: Maintained, and is currently in development
-Version: v0.1.0
-Node Version: 14.17.4 and above
-Authors:
-Chris Wamae, Faith Kigen, Brian Wambua and Kennedy Maina
-License
-This project is licensed under the MIT License
+Status: Maintained, and is currently in development<br />
+Version: v0.1.0<br />
+Node Version: 14.17.4 and above<br />
+Authors:<br />
+Chris Wamae, Faith Kigen, Brian Wambua and Kennedy Maina<br />
+License<br />
+This project is licensed under the MIT License<br />
