@@ -357,8 +357,21 @@ flex-wrap: wrap;
 
 #logout-button{
     position:absolute;
+    background-color:black;
+    color:yellow;
+    width:120px;
+    height:40px;
+    margin-left:40%;
+    margin-top:30px;
+    margin-bottom:0px;
+    top:0px;
+    font-size: large;
+}
+
+#logout-button:hover{
+    position:absolute;
     background-color:#f4efef;
-    color:rgb(193, 193, 28);
+    color:black;
     width:120px;
     height:40px;
     margin-left:40%;
