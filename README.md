@@ -29,6 +29,6 @@ Status: Maintained, and is currently in development<br />
 Version: v0.1.0<br />
 Node Version: 14.17.4 and above<br />
 Authors:<br />
-Chris Wamae, Faith Kigen, Brian Wambua and Kennedy Maina<br />
-License<br />
+[Chris Wamae](https://github.com/chris-wamae), Faith Kigen, Brian Wambua and Kennedy Maina<br />
+License:<br />
 This project is licensed under the MIT License<br />
