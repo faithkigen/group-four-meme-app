@@ -15,7 +15,7 @@ export default function App() {
 const [currentPage,setCurrentPage] = useState()
     return (
         <>
-        <Router>
+     <Router>
             <Routes>
                     <Route path="/" element={ <LandingPage/>} /> 
                     <Route path="/login" element={ <LoginPage/> } />
