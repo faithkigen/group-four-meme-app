@@ -6,7 +6,7 @@ delete an existing meme. A user can also click on a meme to get a better view of
 it.
 
 ## Setup and usage
-The application has been deployed on vercel, to use it, just click on the link below:
+The application has been deployed on vercel, to use it, just click on this link:
  **https://group-four-meme-dgrlmk8ie-chris-wamae.vercel.app/**
 Alternatively, clone this repository into your local machine, move into the repository folder and run  the following commands on your terminal
     - npm install
