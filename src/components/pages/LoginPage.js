@@ -15,7 +15,7 @@ export default function SignInPage() {
                     <br/>
                     <input type="password" name="password" required placeholder='Your password'/>
                 </p>
-                <Link to="/forget-password"><label className="forgotPassword">Forget password?</label></Link>
+                <Link to="/forgot-password"><label className="forgotPassword">Forgot password?</label></Link>
                 <p>
                     <button id="sub_btn" type="submit">Login</button>
                 </p>

@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom'
 import { NavigationContext } from '../../data/NavigationContext'
 import '../../App.css'
 
-export default function ForgetPasswordPage() {
+export default function ForgotPasswordPage() {
     return (
         <div className="text-center m-5-auto">
             <h2>Reset your password</h2>
-            <h5>Enter your email address and we will send you a new password</h5>
+            <h5>Enter your email address/Phone No and we will send you a new password</h5>
             <form action="/login">
                 <p>
-                    <label id="reset_pass_lbl">Email address</label><br/>
+                    <label id="reset_pass_lbl">Email address/ Phone No</label><br/>
                     <input type="email" name="email" required />
                 </p>
                 <p>
