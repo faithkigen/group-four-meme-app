@@ -9,8 +9,8 @@ it.
 The application has been deployed on vercel, to use it, just click on this link:
  **https://group-four-meme-dgrlmk8ie-chris-wamae.vercel.app/**
 Alternatively, clone this repository into your local machine, move into the repository folder and run  the following commands on your terminal
-    - npm install
-    - npm start
+    **npm install**__
+    **npm start**__
 
 ### Development
 This application was created using the React library. The main packages used in creating the application are axios and  Browser Router. Context has also been used heavily in providing data to Components throughout the page.
