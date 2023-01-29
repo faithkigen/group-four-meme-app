@@ -17,7 +17,7 @@ function MemesCollection(props) {
     const [memesData,setMemesData] = useContext(MemesDataContext)
     const [pageData,setPageData] = useState([])
     const [memeView,setMemeView]  = useContext(MemeViewContext)
- 
+ //renders each component for every meme in the array of memes 
     useEffect(()=>{
         setPageData(memesData.map((meme)=>{
             return  <>      
@@ -34,6 +34,7 @@ function MemesCollection(props) {
     },[memesData])
     console.log(memesData)
     return (
+        //logout button  that returns a user to the landing page
         <div>
               <Link to="/">
                    <button id="logout-button">Logout</button> 
@@ -41,7 +42,7 @@ function MemesCollection(props) {
             <h2 id="meme-title">Meme Hub</h2>
            
            {/* // <button onClick={()=>setCurrentPage(<Home/>)}>Go to Home</button> */}
-          
+          {/* //allows a use to add a new meme to the page */}
             <AddMeme/>
             {pageData}
 
